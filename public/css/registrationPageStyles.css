@@ -1,0 +1,192 @@
+html,body{
+    padding:0;
+    margin:0;
+    font-family: Arial,SANS-SERIF,SERIF;
+    font-size:14px;
+}
+
+
+#emailIdValidation{
+ display: none;
+}
+
+#passwordValidation{
+    display:none;
+}
+.helper{
+color:green;
+    font-weight: bold;
+}
+.errorClass{
+    color:red;
+}
+
+.meterWrapper{
+    width:60%;
+    float:left;
+}
+.meterWrapper>meter{
+    width:50%;
+}
+#ssnInput{
+    display:none;
+}
+
+#phoneNumberValidation{
+    display:none;
+}
+
+#cardNumberValidation,#confirmEmailHelper,#confirmValidEmail{
+    display:none;
+}
+
+.imageHolder{
+    width:30%;
+    float:left;
+    border:1px solid #bbbbbb;
+    height:80px;
+}
+.imageHolder img{
+    width:100%;
+}
+
+.microsoftImage img{
+    width:80%!important;
+}
+.capImg img{
+    position: relative;
+    top:13px;
+}
+
+#target {height: 81px; width: 81px; text-align: center; display: table;}
+#target>img{
+    width:100%;
+}
+#target, #src > img {border: thin solid black; padding: 2px; margin:4px;}
+
+#target > p {display: table-cell; vertical-align: middle;}
+#target > img {margin: 1px;position:relative;top:3px;left:0px;}
+img.dragged {background-color: lightgrey;}
+
+
+
+#mainHelper{
+    display:none;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    border:2px solid red;
+}
+
+#confirmPasswordHelper{
+    display:none;
+}
+#securityQuesValue{
+
+}
+.container{
+    width:85%;
+    margin:10px auto;
+
+}
+.clear{
+    clear:both;
+}
+.label{
+    width:20%;
+    float:left;
+    font-weight: bold;
+    text-align: right;
+    padding-right:10px;
+}
+.labelValue{
+    width:20%;
+    float:left;
+}
+.helperDiv{
+    color:red;
+    font-weight: bold;
+    width:58%;
+    float:left;
+}
+.header{
+    text-align: left;
+    width:100%;
+    padding:0 0 2% 2% ;
+    color:#51514D;
+    font-size:20px;
+    border-bottom:2px solid #bbbbbb;
+}
+.innerContainer{
+    margin: 4% auto 1%;
+}
+#lengthHelper,#caseHelper,#lowerCase,#specialCase{
+    width:40%;
+    float:left;
+}
+
+fieldset{
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.wrapper{
+    min-height: 44px;
+}
+
+
+.submitButton{
+    color: #fff;
+    width:110px;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.buttonContainer{
+    width:59%;
+    margin:10px auto;
+    text-align: left;
+}
+
+.imageContainer{
+    width:28%;
+    float:right;
+    margin-right:5%;
+}
+
+#securityQuesWrapper{
+    display:none;
+}
+
+#arrowGreen{
+    position:relative;
+    top:10px;
+}
+
+#Microsoft{
+    position: relative;
+    left: 10px;
+    top: 2px;
+}
+
+.textInfo{
+    width:54%;
+    text-align: right;
+    margin:5px 0 5px 0;
+}

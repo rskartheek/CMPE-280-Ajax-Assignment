@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Page</title>
+    <script type="text/javascript" src="js/script.js" defer></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="css/registrationPageStyles.css"/>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <span><img id="arrowGreen" src="images/arrowGreen.png"/></span>
+        <span>Registration Page</span>
+    </div>
+    <div class="innerContainer">
+        <form name="registrationForm">
+            <div id="mainHelper">Please correct the errors and submit again</div>
+            <div class="wrapper">
+                <div class="label">
+                    User ID
+                </div>
+                <div class="labelValue">
+                    <input type="text" id="firstNameInput" required/>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+
+
+
+
+            <div class="wrapper">
+                <div class="label">
+                    Password
+                </div>
+                <div class="labelValue">
+                    <input type="password" oninput="validatePassword(this.value)" id="passwordInput" required/>
+                </div>
+                <div class="helperDiv" id="passwordValidation">
+                    <div>
+                        <div id="lengthHelper" class="errorClass">Must have atleast 8 characters</div>
+                        <div id="caseHelper" class="errorClass">Must contain 3 uppercase letters</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div>
+                        <div id="lowerCase" class="errorClass">Must contain 2 lower case letters</div>
+                        <div id="specialCase" class="errorClass">Must contain 2 special characters</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="meterWrapper">
+                        <meter id="passwordMeter" min="0"  max="100"></meter>
+                    </div>
+
+                    <div class="clear"></div>
+
+
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            <div class="wrapper">
+                <div class="label">
+                    Verify Password
+                </div>
+                <div class="labelValue">
+                    <input oninput="confirmPassword(this.value)" type="password" id="confirmPasswordInput" required/>
+                </div>
+                <div class="helperDiv" id="confirmPasswordHelper">
+                    Passwords do not match
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="label">
+                    Email
+                </div>
+                <div class="labelValue">
+                    <input type="email" oninput="validateEmail(this.value)" id="emailInput" required/>
+                </div>
+
+                <div class="helperDiv" id="emailIdValidation">
+                    Not a valid Email Address
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="label">
+                    Verify Email
+                </div>
+                <div class="labelValue">
+                    <input type="email" oninput="confirmEmail(this.value)" id="confirmEmailInput" required/>
+                </div>
+
+                <div class="helperDiv">
+                    <span id="confirmEmailHelper"> Not a valid Email Address </span>
+                    <span id="confirmValidEmail"> Email addresses do not match </span>
+
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+
+
+
+
+
+            <div class="wrapper">
+                <div class="label">
+                    Select Security Question:
+                </div>
+                <fieldset class="labelValue">
+
+                    <label>
+                        <input type="text" name="securityQuestion" list="securityQuestions">
+                        <datalist id="securityQuestions">
+                            <option value="Sum of 2 + 3">
+                            </option>
+                            <option value="Sum of 100 + 200">
+                            </option>
+                            <option value="23 * 100">
+                            </option>
+                            <option value="Capital of India">
+                            </option>
+                            <option value="Capital of USA?">
+                            </option>
+
+                        </datalist>
+                    </label>
+
+                </fieldset>
+                <div class="clear"></div>
+
+            </div>
+            <div class="wrapper">
+                <div class="label">Security Question Answer</div>
+                <div class="labelValue">
+                    <input type="text" id="securityQuesValue"/>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="label">
+                    Select Security Question:
+                </div>
+                <fieldset class="labelValue">
+
+                    <label>
+                        <input  type="text" name="securityQuestion" list="securityQuestions2">
+                        <datalist id="securityQuestions2">
+                            <option value="Sum of 2 + 3">
+                            </option>
+                            <option value="Sum of 100 + 200">
+                            </option>
+                            <option value="23 * 100">
+                            </option>
+                            <option value="Capital of India">
+                            </option>
+                            <option value="Capital of USA?">
+                            </option>
+
+                        </datalist>
+                    </label>
+
+                </fieldset>
+                <div class="clear"></div>
+
+            </div>
+            <div class="wrapper">
+                <div class="label">Security Question Answer</div>
+                <div class="labelValue">
+                    <input type="text" id="securityQuesValue2"/>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="wrapper">
+                <div class="label">
+                    Mobile:
+                </div>
+                <div class="labelValue">
+                    <input oninput="validatePhoneNumber(this.value)" type="tel" maxlength="10" id="phoneInput" required/>
+
+                </div>
+                <div class="helperDiv" id="phoneNumberValidation">
+                    Not a valid format for the Mobile Number (Ex: 123-456-7890)
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="wrapper">
+                <div class="label">
+                    Address:
+                </div>
+                <div style="float:left;">
+                    <textarea id="address"  rows="5" cols="65" required>
+
+                    </textarea>
+
+                </div>
+                <div  id="src" class="imageContainer">
+                    <div class="imageHolder capImg"><img id="SanJoseStateUniversity" draggable="true" src="images/SJSU.png"/></div>
+                    <div class="imageHolder capImg"><img id="Cisco" draggable="true" src="images/CISCO.png"/></div>
+                    <div class="imageHolder microsoftImage"><img id="Microsoft" draggable="true" src="images/MICRO.jpg"/></div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="clear"></div>
+            </div>
+
+
+            <div class="textInfo">
+                Areas you may be interested in, please select one or more:
+            </div>
+            <div class="clear"></div>
+            <div class="wrapper">
+                <div class="label">
+                    &nbsp;
+                </div>
+                <div style="float:left">
+                    <textarea id="areasInterested" rows="7" cols="65" required>
+
+                    </textarea>
+                </div>
+                <div id="target" style="float:left;margin-left:4.2%;" class="imageContainer">
+
+                    <p style="border:1px solid black" id="msg">Drop CAPTCHA image Here</p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="buttonContainer">
+                <input  onclick="createForm()" class="submitButton" type="submit"  value="Create"/>
+                <input  onclick="cancel()" style="width:100px;" class="submitButton"   value="Clear"/>
+            </div>
+
+        </form>
+    </div>
+</div>
+</body>
+</html>
